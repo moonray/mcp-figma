@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "name": "figma-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for analyzing Figma file structures",
+  "api": {
+    "schema": "openapi",
+    "url": "http://localhost:3000/openapi.json",
+    "format": "json"
+  },
+  "contact": {
+    "name": "Bala Bosch"
+  },
+  "cli": {
+    "program": "figma-mcp-server"
+  },
+  "auth": {
+    "type": "none"
+  },
+  "os": {
+    "type": "any"
+  }
+}

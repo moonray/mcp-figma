@@ -1,0 +1,41 @@
+# Smithery configuration file
+# See https://smithery.ai/docs/config for more information
+
+# Metadata about the MCP server
+name: "Figma Node Explorer"
+description: "Explore Figma design nodes and their structure for better understanding of design files"
+version: "1.0.0"
+author: "Your Name"
+repository: "https://github.com/yourusername/mcp-figma"
+icon: "https://example.com/figma-icon.png"
+
+# Build configuration
+build:
+  dockerBuildPath: .  # Path to the directory containing the Dockerfile
+
+# Startup configuration
+startCommand:
+  type: stdio  # Using stdio protocol for MCP server
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP server
+    type: object
+    required:
+      - figmaApiKey
+    properties:
+      figmaApiKey:
+        type: string
+        description: "Your Figma API Key (required for accessing Figma files)"
+      port:
+        type: integer
+        description: "Port to run the server on (default: 3000)"
+        default: 3000
+
+# Deployment configuration
+resources:
+  cpu: 0.2    # 0.2 vCPUs
+  memory: 256 # 256 MB RAM
+
+# Documentation links
+links:
+  documentation: "https://github.com/yourusername/mcp-figma#readme"
+  support: "https://github.com/yourusername/mcp-figma/issues"
